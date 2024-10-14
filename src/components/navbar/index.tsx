@@ -41,19 +41,14 @@ const NavBar: FC<NavBarProps> = ({ observerRefs, items = [] }) => {
   }, [observerRefs]);
 
   return (
-    <nav className="container flex items-center justify-center md:justify-around fixed top-5 bg-transparent md:mx-10 mt-5 z-50">
-      <div className="logo hidden md:block">
-        <Link href="/">
-          <Image alt="logo" src='/logo.svg' width={40} height={40}/>
-        </Link>
-      </div>
+    <nav className=" flex items-center justify-center fixed top-5 bg-transparent mt-5 z-50 w-screen">
       <ul className="flex items-center bg-white p-1 rounded-full opacity-80 hover:opacity-100">
         {items.map((item, key) => {
           return (
             <Link href={`#${item.id}`} key={`item-${key}`} scroll>
               <li
                 className={cn(
-                  visibleKey == key ? "bg-primary-200 text-primary-800 font-medium" : "font-extralight",
+                  visibleKey == key ? "bg-secondary-200 text-primary-900 font-medium" : "font-extralight",
                   "px-3 md:px-5 py-1 md:py-2 rounded-full cursor-pointer text-xs"
                 )}
                 onClick={() => {
@@ -66,7 +61,6 @@ const NavBar: FC<NavBarProps> = ({ observerRefs, items = [] }) => {
           );
         })}
       </ul>
-      <span />
     </nav>
   );
 };

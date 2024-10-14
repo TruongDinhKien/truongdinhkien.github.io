@@ -23,7 +23,7 @@ const Footer: FC<FooterProps> = ({ items }) => {
         ))}
       </div>
       <div className="text-xs">
-        | &copy; 2024 Copyright Kien Truong
+        | &copy; 2024 • Copyright Kien Truong
         <a href="#"></a> |
       </div>
     </footer>

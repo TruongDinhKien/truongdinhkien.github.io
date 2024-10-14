@@ -1,4 +1,4 @@
-import { StackTech, Home } from "@/components/sections";
+import { StackTech, Home, Contact} from "@/components/sections";
 
 export const sections = [
   {
@@ -10,7 +10,7 @@ export const sections = [
   },
   {
     id: 1,
-    name: "skills",
+    name: "bussiness",
     className: "bg-gray-900",
     render: StackTech,
   },
@@ -27,6 +27,7 @@ export const sections = [
   {
     id: 4,
     name: "contact",
-    bgColor: "lightsalmon",
+    className: "flex justify-center bg-gray-100 p-5",
+    render: Contact,
   },
 ];
